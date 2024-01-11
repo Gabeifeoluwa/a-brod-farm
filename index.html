@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="image-cont">
+
+        <nav>
+            <a href="index.html"><img src="logo.jpg" alt="Logo" class="logo" height="80px"></a>
+            
+                <div class="links">
+                    <a class="nav-link" href="programme/index.html" style="color: #5BBD6E">Contact Us</a>
+                </div>
+
+                <!-- <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div> -->
+        </nav>
+
+
+        <div class="hero-cont">
+            <div class="heading-cont">
+                <h1>
+                    Excellence in Agriculture
+                </h1>
+                <h2>
+                    Welcome to Abrod Farms - Your Premier Source for Quality Crops 
+                </h2>
+            </div>
+
+            <button class="contact-btn">Contact US</button>
+        </div>
+
+    </div>
+
+    <div class="about-cont">
+        <div class="text-cont">
+            <h2>
+                Founded with a Vision
+            </h2>
+
+            <p>
+                Established with the zeal for excellence in agriculture, Abrod Farms has evolved significantly since its inception. Our foundation rests on a deep-rooted passion for end-to-end agricultural solutions, encompassing everything from meticulous crop selection to advanced mechanized farming systems. 
+            </p>
+        </div>
+
+        <img class="about-img" src="fan.jpg">
+    </div>
+
+
+    <div class="focus-cont">
+            <h2>
+                Crop Focus: Diverse and Rich 
+            </h2>
+
+            <h3>
+                Our farming expertise spans across a variety of crops, ensuring a rich selection for our customers:
+            </h3>
+
+            <ul>
+                <a href="rice/index.html"  style="text-decoration: none;"><li>
+                    Lush Rice Plantations 
+                </li>
+                </a>
+                <a  href="palm/index.html" style="text-decoration: none;">
+                <li>
+                    Sustainable Palm Plantations 
+                </li></a>
+                <a href="sweet potato/index.html" style="text-decoration: none;">
+                <li>
+                    Nutritious Sweet Potatoes  
+                </li></a>
+            </ul>
+    </div>
+
+    <div class="value-chain">
+
+        <h2>A Value Chain Approach</h2>
+
+        <div class="value-chain-img">
+            <img src="sustainablefarming.png" alt="" class="susfarm">
+            <img src="processing.png" alt="" class="procesing">
+            <img src="storage.png" alt="" class="storage">
+            <img src="market.png" alt="" class="market">
+        </div>
+
+        <p class="value-chain-explain">We adopt a comprehensive value chain approach in our operations. This method ensures top-notch quality as we oversee each stage - from nurturing seeds to thriving crops, and from processing to packaging. Our integrated system allows us to supply the best quality produce at competitive prices, meeting both local and global demands. </p>
+
+        <div class="value-chain-grid">
+            <div class="first-row row">    
+                <div class="grid-1 susfarm-grid col-6">
+                    <h3>Sustainable Farming Practices </h3>
+                    <p>Sustainability is at the heart of Abrod Farms. We operate large-scale, modernized farms and collaborate with skilled Outgrower farmers, adopting practices that are both eco-friendly and yield-enhancing. </p>
+                </div>
+                <div class="grid-2 procesing-grid col-4">
+                    <h3>Processing & Packaging Excellence  </h3>
+                    <p>We transform raw materials into world-class products through our state-of-the-art processing and packaging facilities. Our focus is on maintaining the natural goodness of our produce while ensuring top-tier quality. </p>
+                </div>
+            </div>
+            <div class="second-row row">
+                <div class="grid-3 storage-grid col-4">
+                    <h3>Storage & Logistics Solutions </h3>
+                    <p>Understanding the importance of reducing wastage, we implement world-class technology for efficient storage and logistics. This ensures that our produce maintains its quality from our farms to your table. </p>
+                </div>
+                <div class="grid-4 market-grid col-6">
+                    <h3>Global Reach, Local Touch </h3>
+                    <p>Our market extends beyond local horizons, embracing a global customer base. We take pride in creating and serving markets both within our local community and across the world, bringing the best of Abrod Farms to an international stage. </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="contact-us">
+        <div class="inner-contact">
+            <h3>Connect with Us </h3>
+            <p>Your satisfaction and feedback are vital to us. For inquiries or comments, please feel free to reach out: info@a-brod.com </p>
+            <p>We look forward to serving you with our exceptional produce and hope you enjoy them as much as we enjoy bringing them to you. </p>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+
+    document.addEventListener('scroll', function () {
+      let scrollTop = window.scrollY;
+      let parallaxOverlay = document.querySelector('.parallax-overlay');
+      parallaxOverlay.style.transform = 'translateY(' + scrollTop * 0.5 + 'px)';
+    });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+      let images = document.querySelectorAll('.value-chain-img img');
+
+      function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+
+      function handleScroll() {
+        let delay = 0.3; // Adjust the delay time as needed
+        images.forEach(function (image, index) {
+          if (isInViewport(image) && !image.classList.contains('show')) {
+            setTimeout(function () {
+              image.classList.add('show');
+            }, index * delay * 1000);
+          }
+        });
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleScroll);
+      handleScroll(); // Check on page load
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      let h3 = document.querySelector('.focus-cont h3');
+
+      function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+
+      function handleScroll() {
+        if (isInViewport(h3) && !h3.classList.contains('show')) {
+          h3.classList.add('show');
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleScroll);
+      handleScroll(); // Check on page load
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      let paragraph = document.querySelector('.about-cont .text-cont p');
+
+      function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+
+      function handleScroll() {
+        if (isInViewport(paragraph) && !paragraph.classList.contains('show')) {
+          paragraph.classList.add('show');
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleScroll);
+      handleScroll(); // Check on page load
+    });
+    </script>
+    
+</body>
+</html>
